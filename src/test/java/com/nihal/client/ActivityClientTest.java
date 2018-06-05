@@ -10,6 +10,21 @@ import com.nihal.model.Activity;
 
 public class ActivityClientTest extends TestCase {
 
+	@Test //test put
+	public void testUpdate(){
+		
+		Activity activity= new Activity();
+		activity.setId("3456");
+		activity.setDescription("yoga");
+		activity.setDuration(60);
+		
+		ActivityClient client = new ActivityClient();
+		activity= client.update(activity);
+		
+		assertNotNull(activity);
+	}
+	
+	//post test
 	@Test
 	public void testCreate(){
 		ActivityClient client = new ActivityClient();

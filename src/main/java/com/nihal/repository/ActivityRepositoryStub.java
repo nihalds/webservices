@@ -59,4 +59,17 @@ public class ActivityRepositoryStub implements ActivityRepository {
 		// we write insert into db here
 		System.out.println("received : "+activity);
 	}
+	
+	@Override
+	public Activity update(Activity activity) {
+		/*search db if activity is already available
+		 * select * from Activity where id=?
+		 * id rs size==0
+		 * insert into activity
+		 * else
+		 * update activity 
+		 */
+		
+		return activity;
+	}
 }
